@@ -1,0 +1,165 @@
+.cart-page {
+  padding: 28px 12px 48px;
+}
+
+.cart-hero {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.cart-hero p {
+  color: #6b7280;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.cart-hero h1 {
+  color: #111827;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.cart-hero h4 {
+  color: #374151;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cart-layout {
+  align-items: flex-start;
+  row-gap: 24px;
+}
+
+.cart-item,
+.empty-cart-panel,
+.cart-summary {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(17, 24, 39, 0.06);
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 22px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 18px;
+}
+
+.cart-item-image {
+  border: 1px solid #eef0f3;
+  border-radius: 8px;
+  height: 130px;
+  overflow: hidden;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+}
+
+.cart-item-info h5 {
+  color: #111827;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.cart-item-info p {
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+.cart-item-info strong {
+  color: green;
+  font-size: 18px;
+}
+
+.cart-line-total {
+  color: #6b7280;
+  display: block;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.cart-item-actions {
+  display: grid;
+  gap: 10px;
+  justify-items: stretch;
+  min-width: 150px;
+}
+
+.cart-item-actions .btn,
+.cart-summary .btn,
+.empty-cart-panel .btn {
+  border-radius: 6px;
+  font-weight: 600;
+  min-height: 42px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.cart-quantity-control {
+  width: 100%;
+}
+
+.cart-summary {
+  padding: 24px;
+  position: sticky;
+  text-align: center;
+  top: 96px;
+}
+
+.cart-summary h2 {
+  color: #111827;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 8px;
+}
+
+.cart-summary p {
+  color: #4b5563;
+}
+
+.cart-summary h4 {
+  margin: 18px 0;
+}
+
+.empty-cart-panel {
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.empty-cart-panel h3 {
+  color: #111827;
+  font-family: "Playfair Display", serif;
+}
+
+.empty-cart-panel p {
+  color: #4b5563;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 767px) {
+  .cart-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cart-item-image {
+    height: 220px;
+  }
+
+  .cart-summary {
+    position: static;
+  }
+
+  .cart-item-actions {
+    min-width: 0;
+  }
+}

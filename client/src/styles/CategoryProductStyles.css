@@ -1,0 +1,25 @@
+.category {
+    padding: 24px 12px 40px;
+  }
+  .category .card {
+    width: 100%;
+  }
+  .category .card-name-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .category .card-price {
+    color: green;
+    font-weight: bold;
+  }
+  .category button {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .category .card-text {
+    color: rgb(90, 89, 89);
+  }
+  

@@ -1,0 +1,137 @@
+.dashboard-page {
+  padding: 34px 12px 54px;
+}
+
+.dashboard-shell {
+  align-items: flex-start;
+  row-gap: 24px;
+}
+
+.dashboard-sidebar {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(17, 24, 39, 0.06);
+  overflow: hidden;
+}
+
+.dashboard-sidebar h4 {
+  color: #111827;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 18px;
+}
+
+.dashboard-sidebar .list-group {
+  border-radius: 0;
+}
+
+.dashboard-sidebar .list-group-item {
+  border-left: 0;
+  border-right: 0;
+  color: #374151;
+  font-weight: 500;
+  padding: 14px 18px;
+}
+
+.dashboard-sidebar .list-group-item:first-of-type {
+  border-top: 1px solid #e5e7eb;
+}
+
+.dashboard-sidebar .list-group-item.active {
+  background: #0d6efd;
+  border-color: #0d6efd;
+  color: #ffffff !important;
+}
+
+.dashboard-card,
+.profile-card,
+.orders-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(17, 24, 39, 0.06);
+  padding: 28px;
+}
+
+.dashboard-card h2,
+.profile-card h2,
+.orders-card h2 {
+  color: #111827;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+.dashboard-info {
+  display: grid;
+  gap: 16px;
+}
+
+.dashboard-info-item {
+  border-bottom: 1px solid #eef0f3;
+  padding-bottom: 14px;
+}
+
+.dashboard-info-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dashboard-info-item span {
+  color: #6b7280;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.dashboard-info-item strong {
+  color: #111827;
+  font-size: 20px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.profile-form {
+  display: grid;
+  gap: 16px;
+  max-width: 620px;
+}
+
+.profile-form .form-control {
+  border: 1px solid #d8dee6;
+  border-radius: 7px;
+  min-height: 48px;
+}
+
+.profile-form .btn {
+  border-radius: 6px;
+  font-weight: 700;
+  min-height: 46px;
+  width: 180px;
+}
+
+.orders-empty {
+  color: #4b5563;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .dashboard-page {
+    padding-top: 24px;
+  }
+
+  .dashboard-card,
+  .profile-card,
+  .orders-card {
+    padding: 22px;
+  }
+
+  .profile-form {
+    max-width: none;
+  }
+
+  .profile-form .btn {
+    width: 100%;
+  }
+}
