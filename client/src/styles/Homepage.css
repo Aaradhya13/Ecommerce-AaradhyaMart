@@ -60,12 +60,8 @@
     font-size: 18px;
   }
   
-  .ant-checkbox-wrapper:first-of-type {
-    margin-left: 8px;
-  }
-  
   .ant-checkbox-wrapper {
-    margin: 2px;
+    margin: 2px 0;
   }
   .ant-radio-wrapper {
     margin-bottom: 5px !important;

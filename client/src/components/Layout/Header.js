@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
@@ -7,6 +7,7 @@ import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
 import { BsCart3 } from "react-icons/bs";
+import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { getCartQuantity } from "../../utils/cart";
 
 const Header = () => {
@@ -14,13 +15,10 @@ const Header = () => {
   const [cart] = useCart();
   const categories = useCategory();
   const cartQuantity = getCartQuantity(cart);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = () => {
-    setAuth({
-      ...auth,
-      user: null,
-      token: "",
-    });
+    setAuth({ ...auth, user: null, token: "" });
     localStorage.removeItem("auth");
     toast.success("Logged out Successfully");
   };
@@ -34,10 +32,11 @@ const Header = () => {
           data-bs-toggle="collapse"
           data-bs-target="#navbarTogglerDemo01"
           aria-controls="navbarTogglerDemo01"
-          aria-expanded="false"
+          aria-expanded={menuOpen}
           aria-label="Toggle navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span className="navbar-toggler-icon" />
+          {menuOpen ? <RxCross2 size={22} /> : <RxHamburgerMenu size={22} />}
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <Link to="/" className="navbar-brand">
@@ -99,9 +98,7 @@ const Header = () => {
                 <ul className="dropdown-menu">
                   <li>
                     <NavLink
-                      to={`/dashboard/${
-                        auth?.user?.role === 1 ? "admin" : "user"
-                      }`}
+                      to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}
                       className="dropdown-item"
                     >
                       Dashboard
