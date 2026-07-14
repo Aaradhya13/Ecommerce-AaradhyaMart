@@ -1,38 +1,30 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { MdDashboard, MdCategory, MdAddBox, MdInventory, MdPeople } from "react-icons/md";
+import "../../styles/AdminStyles.css";
+
 const AdminMenu = () => {
   return (
-    <>
-      <div className="text-center">
-        <div className="list-group">
-          <h4>Admin Panel</h4>
-          <NavLink
-            to="/dashboard/admin/create-category"
-            className="list-group-item list-group-item-action"
-          >
-            Create Category
-          </NavLink>
-          <NavLink
-            to="/dashboard/admin/create-product"
-            className="list-group-item list-group-item-action"
-          >
-            Create Product
-          </NavLink>
-          <NavLink
-            to="/dashboard/admin/products"
-            className="list-group-item list-group-item-action"
-          >
-            Products
-          </NavLink>
-          <NavLink
-            to="/dashboard/admin/users"
-            className="list-group-item list-group-item-action"
-          >
-            Users
-          </NavLink>
-        </div>
+    <div className="admin-sidebar">
+      <div className="admin-sidebar-card">
+        <div className="admin-sidebar-title">Admin Panel</div>
+        <NavLink to="/dashboard/admin" end className="admin-nav-link">
+          <MdDashboard /> Dashboard
+        </NavLink>
+        <NavLink to="/dashboard/admin/create-category" className="admin-nav-link">
+          <MdCategory /> Create Category
+        </NavLink>
+        <NavLink to="/dashboard/admin/create-product" className="admin-nav-link">
+          <MdAddBox /> Create Product
+        </NavLink>
+        <NavLink to="/dashboard/admin/products" className="admin-nav-link">
+          <MdInventory /> Products
+        </NavLink>
+        <NavLink to="/dashboard/admin/users" className="admin-nav-link">
+          <MdPeople /> Users
+        </NavLink>
       </div>
-    </>
+    </div>
   );
 };
 
