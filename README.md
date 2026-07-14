@@ -6,7 +6,7 @@ A full-stack ecommerce web application built with the **MERN stack** (MongoDB, E
 
 ## 🔗 Links
 
-- 🌐 **Live Demo:** [your-deployed-link.com](https://aaradhyasmart.onrender.com/) 
+- 🌐 **Live Demo:** [https://aaradhyasmart.onrender.com/](https://aaradhyasmart.onrender.com/) 
 - 📹 **Demo Video:** [Watch here](https://drive.google.com/file/d/1_MQcAxwv19SbKFDc93NNLw34dsGoElkx/view?usp=drivesdk) 
 
 ---
